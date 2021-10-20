@@ -1,0 +1,15 @@
+<div class="container">
+<h1 class = "d-flex justify-content-center">Info about Article</h1>
+<br>
+<p><b> Title:     </b><%= @article.title %> </p>
+<p><b> Content:   </b><%= @article.content %> </p>
+<br>
+<%= link_to edit_article_path(@article) do %><i class="fas fa-pencil-alt"></i><% end %>
+
+<%= link_to article_path(@article), method: :delete, data: { confirm: "Are you sure?" } do %>    <i class="far fa-trash-alt"></i>  <% end %>                            
+
+<%= link_to articles_path do %><i class="fas fa-undo"></i><% end %>
+
+
+<%#= link_to 'Google', 'https://google.com', class: 'link' %>
+</div>
